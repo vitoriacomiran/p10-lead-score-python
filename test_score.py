@@ -1,3 +1,4 @@
+echo '
 import json
 
 # Dados de entrada Exemplo de uso
@@ -71,4 +72,4 @@ print(json.dumps({
     "lead_score": round(score_total, 2),
     "classificacao": classificacao
 }))
-
+'| python3
