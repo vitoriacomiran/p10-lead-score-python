@@ -1,6 +1,6 @@
 import json
 
-# Dados de entrada
+# Dados de entrada Exemplo de uso
 segmento = "Serviços em geral"
 cargo = "Analista"
 licencas = "4 a 8"
@@ -37,9 +37,19 @@ pesos = {
 }
 
 # Cálculo
-seg_score = segmentos.get(segmento, 3)
+seg_score = segmentos.get(segmento, 3) 
 cargo_score = cargos.get(cargo, 3)
 licenca_score = licencas_pontuacao.get(licencas, 10)
+
+# verifica se o valor está no dicionário de segmentos, se não estiver ou for outro, atribui o valor de 3
+# para o campo cargo a mesma coisa
+# na licença caso no futuro inserimos um campo 'ainda não sei' ele pegaria os 10 pontos padrões
+
+# aqui usa o método de dicionário, get com (chave, valor_padrão) para não ter que fazer algo tipo:
+# if segmento in segmentos:
+#    seg_score = segmentos[segmento]
+# else:
+#    seg_score = 3 
 
 score_total = (
     (seg_score / 15) * pesos["segmento"] * 100 +
@@ -61,4 +71,4 @@ print(json.dumps({
     "lead_score": round(score_total, 2),
     "classificacao": classificacao
 }))
-' | python3
+
