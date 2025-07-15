@@ -1,4 +1,3 @@
-echo '
 import json
 
 # Dados de entrada
