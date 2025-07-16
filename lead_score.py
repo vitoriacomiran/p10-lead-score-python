@@ -1,6 +1,3 @@
-echo '
-import json
-
 # primeiro passo: definir as variáveis
 segmentos = input("Informe os segmentos: ")
 cargos = input("Informe o cargo: ")
@@ -70,6 +67,6 @@ else:
 
 # passo 7: printar o valor do score
 
-print(json.dumps({"lead_score": round(score_total, 2), "score": score}))
+print("lead_score": round(score_total, 2), "score": score))
 
-'| python3
+
