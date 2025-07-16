@@ -1,6 +1,6 @@
-## Lead Scoring - Classificação de Leads
+## Lead Score - Classificação de Leads
 
-Este projeto é um modelo simples de **Lead Scoring** que classifica leads com base em três critérios:
+Este projeto é um modelo simples de **Lead Score** que classifica leads com base em três critérios:
 
 - **Segmento da empresa** (15%)
 - **Cargo do contato** (15%)
@@ -17,11 +17,12 @@ Cada critério possui uma pontuação definida. A pontuação total (de 0 a 100)
 
 ### Como funciona
 
-O código recebe os dados do lead (segmento, cargo e quantidade de licenças), aplica os pesos definidos e calcula o score total de forma proporcional. A saída final é um dicionário JSON com o score e a classificação do lead.
+O código recebe os dados do lead (segmento, cargo e quantidade de licenças), aplica os pesos definidos e calcula o score total de forma proporcional. A saída final é um dicionário JSON com o score e a classificação do lead com o intuito de adicionar ao N8N para integração através de um Execut_Command ou Webhook.
+Ao adicionar no N8N deve-se tirar o input utilizado, pois ele foi adicionado apenas para testar.
 
 ### Como testar
 
 Execute o script em um terminal Python e preencha os dados quando solicitado:
 
 ```bash
-python lead_scoring.py
+python lead_score.py
